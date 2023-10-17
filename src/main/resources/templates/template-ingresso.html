@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        /* Estilo para o email */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .ticket {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Ingresso para o Evento</h1>
+    </div>
+    <div class="content">
+        <p>Olá <span th:text="${nomeCliente}">Nome do Cliente</span>,</p>
+        <p>Aqui está o seu ingresso para o evento:</p>
+
+        <div class="ticket">
+            <p><strong>Código da Venda:</strong> <span th:text="${codigoVenda}">Código da Venda</span></p>
+            <p><strong>Descrição do Evento:</strong> <span th:text="${descricaoEvento}">Descrição do Evento</span></p>
+            <p><strong>Local do Evento:</strong> <span th:text="${localEvento}">Local do Evento</span></p>
+            <p><strong>Data do Evento:</strong> <span th:text="${dataEvento}">Data do Evento</span></p>
+            <p><strong>Valor do Ingresso:</strong> R$ <span th:text="${valor}">Valor do Ingresso</span></p>
+            <p><strong>Cidade do Cliente:</strong> <span th:text="${cidadeCliente}">Cidade do Cliente</span></p>
+            <p><strong>CPF do Cliente:</strong> <span th:text="${cpfCliente}">CPF do Cliente</span></p>
+        </div>
+
+        <p>Aproveite o evento e divirta-se!</p>
+    </div>
+</div>
+</body>
+</html>
